@@ -10,12 +10,13 @@ services:
 
   ide:
     image: codercom/code-server:1.621
-    command: --allow-http --no-auth --data-dir /data /src
+    command: --allow-http --no-auth --user-data-dir /data --port 8888 /src
     volumes:
       - './:/src'
       - './data:/data'
+      - '~/.gitconfig:/etc/gitconfig'
     ports:
-      - '8443:8443'
+      - '8888:8888'
 
   db:
     image: postgres:9-alpine
