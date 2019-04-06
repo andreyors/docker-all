@@ -15,7 +15,7 @@ services:
       - './:/src'
       - './data:/data'
       - '~/.gitconfig:/etc/gitconfig'
-      - '~/.ssh:/root/.ssh'
+      - '~/.ssh:/home/coder/.ssh'
     ports:
       - '8888:8888'
 
