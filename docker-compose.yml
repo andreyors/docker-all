@@ -9,8 +9,9 @@ services:
       - '.:/src'
 
   ide:
-    image: codercom/code-server:1.621
-    command: --allow-http --no-auth --user-data-dir /data --port 8888 /src
+    build: 
+      context: .
+      dockerfile: docker/ide/Dockerfile
     volumes:
       - './:/src'
       - './data:/data'

@@ -1,4 +1,5 @@
 {
     "breadcrumbs.enabled": false,
-    "workbench.colorTheme": "One Dark Pro Monokai Darker"
+    "workbench.colorTheme": "One Dark Pro Monokai Darker",
+    "workbench.startupEditor": "newUntitledFile"
 }
