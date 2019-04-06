@@ -1,0 +1,27 @@
+version: '2'
+
+services: 
+  app:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    volumes:
+      - '.:/src'
+
+  ide:
+    image: codercom/code-server:1.621
+    command: --allow-http --no-auth --data-dir /data /src
+    volumes:
+      - './:/src'
+      - './data:/data'
+    ports:
+      - '8443:8443'
+
+  db:
+    image: postgres:9-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_DATABASE: test
+      POSTGRES_PASSWORD: test
