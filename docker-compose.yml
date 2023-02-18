@@ -9,13 +9,15 @@ services:
       - '.:/src'
 
   db:
-    image: postgres:9-alpine
+    image: postgres:14.6-alpine
     ports:
       - '5432:5432'
+    command: "-c synchronous_commit=off -c fsync=off -c full_page_writes=off"
     environment:
       POSTGRES_USER: test
       POSTGRES_DATABASE: test
       POSTGRES_PASSWORD: test
+      POSTGRES_INITDB_ARGS: "--auth-host=md5 --auth-local=md5"
 
   adminer:
     image: adminer:4
