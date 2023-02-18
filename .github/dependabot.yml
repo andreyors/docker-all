@@ -5,14 +5,3 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: mocha
-    versions:
-    - 8.3.2
-  - dependency-name: pg
-    versions:
-    - 8.5.1
-    - 8.6.0
-  - dependency-name: chai
-    versions:
-    - 4.3.4
