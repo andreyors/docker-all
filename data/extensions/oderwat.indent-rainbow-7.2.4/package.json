@@ -93,7 +93,7 @@
 		"@types/node": "^6.0.40"
 	},
 	"dependencies": {
-		"vsce": "^1.46.0"
+		"vsce": "^1.103.1"
 	},
 	"__metadata": {
 		"id": "oderwat.indent-rainbow",
